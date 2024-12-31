@@ -108,7 +108,7 @@ cat << 'EOF' > /usr/local/bin/Nashic
 #!/bin/bash
 # Download and execute the VPN installation script
 set -e  # Exit immediately if a command exits with a non-zero status
-wget https://raw.githubusercontent.com/Nashicug3/Install-wireguard-vpn/refs/heads/main/wireguard.sh -O install-vpn.sh
+wget https://raw.githubusercontent.com/Nashicug3/Install-wireguard-vpn/main/wireguard.sh -O install-vpn.sh
 chmod +x wireguard.sh
 ./wireguard.sh
 EOF
