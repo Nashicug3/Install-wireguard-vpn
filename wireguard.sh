@@ -5,7 +5,7 @@ NC='\033[0m'
 clear
 figlet -f slant "NashicTech" | lolcat
 echo -e "\033[1;33mNashicTech Installer\033[0m"
-echo -e "\033[1;32m NashicTecht v1.0 \033[0m"
+echo -e "\033[1;32m NashicTech v1.0 \033[0m"
 echo
 # Check for root privileges
 if [ "$(whoami)" != "root" ]; then
@@ -108,14 +108,14 @@ cat << 'EOF' > /usr/local/bin/Nashic
 #!/bin/bash
 # Download and execute the VPN installation script
 set -e  # Exit immediately if a command exits with a non-zero status
-wget https://raw.githubusercontent.com/Hyper-21-stack/vpn-setup/main/Install-vpn.sh -O install-vpn.sh
-chmod +x install-vpn.sh
-./install-vpn.sh
+wget https://raw.githubusercontent.com/Nashicug3/Install-wireguard-vpn/refs/heads/main/wireguard.sh -O install-vpn.sh
+chmod +x wireguard.sh
+./wireguard.sh
 EOF
 # Make the Nashic script executable
-chmod +x /usr/local/bin/hyped
+chmod +x /usr/local/bin/Nashic
 # Update .bashrc to show the banner on login
-echo '/usr/local/bin/hyper_banner.sh' >> /root/.bashrc
+echo '/usr/local/bin/nashic_banner.sh' >> /root/.bashrc
 # Check for WireGuard configuration
 if [[ ! -e /etc/wireguard/wg0.conf ]]; then
     # Check for wget and curl
